@@ -1,31 +1,31 @@
 # G_02 – Address Entity Recognition
 
-Chương trình nhận diện **Province, Ward và Street** từ chuỗi địa chỉ bằng thuật toán **Aho-Corasick** (`daachorse`).
+This program identifies **provinces, wards, and streets** from address strings using the **Aho-Corasick** algorithm (`daachorse`).
 
 ## Processing Flow
 
-![Processing Flow](processing_flow.png)
+![Processing Flow](processing_flow_en.png)
 
 ## Run with Google Colab
 
-1. Mở [`G_02.ipynb`](https://colab.research.google.com/drive/1zrGDObIwB3exO5nfQoMPCgaU-3LvGQ_4) hoặc upload notebook lên [Google Colab](https://colab.research.google.com/).
-2. Chọn **Runtime → Run all**.
-3. Notebook tự cài thư viện, tải dữ liệu test và database từ Google Drive, chạy đánh giá.
-4. Sau khi chạy xong, file kết quả `G_02.xlsx` được tạo. File gồm hai sheet: `summary` và `details`.
+1. Open [`G_02.ipynb`](https://colab.research.google.com/drive/1zrGDObIwB3exO5nfQoMPCgaU-3LvGQ_4), or upload the notebook to [Google Colab](https://colab.research.google.com/).
+2. Select **Runtime → Run all**.
+3. The notebook automatically installs the required libraries, downloads the test data and database from Google Drive, and runs the evaluation.
+4. Once execution is complete, the output file `G_02.xlsx` is generated. It contains two sheets: `summary` and `details`.
 
-Cần có kết nối Internet để tải dữ liệu từ Google Drive.
+An Internet connection is required to download the data from Google Drive.
 
 ## Run with Python (.py)
 
-### 1. Prepare environment
+### 1. Prepare the environment
 
-Cài Python và mở Terminal tại thư mục project. Nên tạo virtual environment:
+Install Python and open a Terminal in the project directory. It is recommended to create a virtual environment:
 
 ```bash
 python -m venv .venv
 ```
 
-Kích hoạt môi trường:
+Activate the environment:
 
 **macOS / Linux**
 ```bash
@@ -34,19 +34,19 @@ source .venv/bin/activate
 
 **Windows**
 ```powershell
-.venv\Scripts\activate
+.venv\\Scripts\\activate
 ```
 
-Cài các thư viện cần thiết:
+Install the required libraries:
 
 ```bash
 python -m pip install --upgrade pip
 python -m pip install daachorse pandas xlsxwriter editdistance gdown
 ```
 
-### 2. Prepare data files
+### 2. Prepare the data files
 
-Đặt các file sau cùng thư mục với `g_02.py`:
+Place the following files in the same directory as `g_02.py`:
 
 ```text
 test.json
@@ -55,7 +55,7 @@ list_ward.txt
 list_street.txt
 ```
 
-Có thể tải các file bằng lệnh sau trong Terminal:
+You can download these files by running the following commands in Terminal:
 
 ```bash
 gdown --fuzzy "https://drive.google.com/file/d/18qzaHmx9-fcKPi4gTq304G2JvXy_g6XW/view?usp=sharing" -O test.json
@@ -66,7 +66,7 @@ gdown --fuzzy "https://drive.google.com/file/d/1yP2dBE8K9QtUiaLPewtQRr-hDH0gOgfa
 
 ### 3. Run the script
 
-**Note:** `g_02.py` is exported from the Colab notebook and currently contains notebook shell commands beginning with `!` (such as `!pip`, `!rm`, and `!gdown`). These commands are not valid in a normal Python script. Run the installation and download commands above in Terminal, then remove the corresponding `!` command cells/lines from `g_02.py` before running it.
+**Note:** `g_02.py` is exported from the Colab notebook and currently contains notebook shell commands beginning with `!` (such as `!pip`, `!rm`, and `!gdown`). These commands are not valid in a standard Python script. Run the installation and download commands above in Terminal, then remove the corresponding lines beginning with `!` from `g_02.py` before running it.
 
 Run:
 
@@ -74,7 +74,7 @@ Run:
 python g_02.py
 ```
 
-The script writes the evaluation workbook `G_02.xlsx` in the current directory.
+The script saves the evaluation workbook `G_02.xlsx` in the current directory.
 
 ## Output
 
@@ -88,4 +88,4 @@ The script writes the evaluation workbook `G_02.xlsx` in the current directory.
 }
 ```
 
-A field is `None` when no matching entity is selected.
+A field is set to `None` if no matching entity is selected.
