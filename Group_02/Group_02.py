@@ -17,8 +17,8 @@ TEAM_NAME = 'Group_02'
 # NOTE: you CAN change this cell
 # Add more to your needs
 # you must place ALL pip install here
-!pip install editdistance
-!pip install daachorse
+# !pip install editdistance
+# !pip install daachorse
 
 # NOTE: you CAN change this cell
 # import your library here
@@ -107,11 +107,11 @@ class Solution:
         return result
 
 # Download public test
-!rm -rf test.json
-!gdown --fuzzy https://drive.google.com/file/d/18qzaHmx9-fcKPi4gTq304G2JvXy_g6XW/view?usp=sharing -O test.json
-!gdown --fuzzy https://drive.google.com/file/d/1PHRkRLRaO2vFivLbcPJsaxjvZ7K_I3lU/view?usp=drive_link -O list_province.txt
-!gdown --fuzzy https://drive.google.com/file/d/1QrSouYn6IUEW7Impje1vOxzsksjlAJ-h/view?usp=drive_link -O list_ward.txt
-!gdown --fuzzy https://drive.google.com/file/d/1yP2dBE8K9QtUiaLPewtQRr-hDH0gOgfa/view?usp=drive_link -O list_street.txt
+# !rm -rf test.json
+# !gdown --fuzzy https://drive.google.com/file/d/18qzaHmx9-fcKPi4gTq304G2JvXy_g6XW/view?usp=sharing -O test.json
+# !gdown --fuzzy https://drive.google.com/file/d/1PHRkRLRaO2vFivLbcPJsaxjvZ7K_I3lU/view?usp=drive_link -O list_province.txt
+# !gdown --fuzzy https://drive.google.com/file/d/1QrSouYn6IUEW7Impje1vOxzsksjlAJ-h/view?usp=drive_link -O list_ward.txt
+# !gdown --fuzzy https://drive.google.com/file/d/1yP2dBE8K9QtUiaLPewtQRr-hDH0gOgfa/view?usp=drive_link -O list_street.txt
 
 def _judge_normalize(s: str, context=None):
     return s
@@ -277,7 +277,7 @@ print(f'{TEAM_NAME = }')
 print(f'{EXCEL_FILE = }')
 print(df2)
 
-!pip install xlsxwriter
+# !pip install xlsxwriter
 writer = pd.ExcelWriter(EXCEL_FILE, engine='xlsxwriter')
 df2.to_excel(writer, index=False, sheet_name='summary')
 df.to_excel(writer, index=False, sheet_name='details')
