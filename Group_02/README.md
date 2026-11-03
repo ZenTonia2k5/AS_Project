@@ -1,6 +1,6 @@
 # Group_02 – Address Segmentation Project
+[![Repo](https://img.shields.io/badge/github-AS_Project-blue?logo=github)](https://github.com/ZenTonia2k5/AS_Project)
 Advance Algorithm Course 261 Assignment
-[![Repo](https://img.shields.io/badge/Link_to_github_Repo-AS_Project-green)]([https://github.com/ZenTonia2k5/Mocap-Project/raw/main/Multidisciplinary_Project.pdf](https://github.com/ZenTonia2k5/AS_Project))
 
 This program identifies **provinces, wards, and streets** from address strings using the **Aho-Corasick** algorithm (`daachorse`).
 
