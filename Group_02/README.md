@@ -4,7 +4,7 @@ This program identifies **provinces, wards, and streets** from address strings u
 
 ## Processing Flow
 
-![Processing Flow](processing_flow_en.png)
+![Processing Flow](processing_flow.png)
 
 ## Run with Google Colab
 
