@@ -1,4 +1,6 @@
-# G_02 – Address Entity Recognition
+# Group_02 – Address Segmentation Project
+Advance Algorithm Course 261 Assignment
+[![Repo](https://img.shields.io/badge/Link_to_github_Repo-AS_Project-green)]([https://github.com/ZenTonia2k5/Mocap-Project/raw/main/Multidisciplinary_Project.pdf](https://github.com/ZenTonia2k5/AS_Project))
 
 This program identifies **provinces, wards, and streets** from address strings using the **Aho-Corasick** algorithm (`daachorse`).
 
@@ -8,12 +10,12 @@ This program identifies **provinces, wards, and streets** from address strings u
 
 ## Run with Google Colab
 
-1. Open [`G_02.ipynb`](https://colab.research.google.com/drive/1zrGDObIwB3exO5nfQoMPCgaU-3LvGQ_4), or upload the notebook to [Google Colab](https://colab.research.google.com/).
+1. Open [`Group_02.ipynb`](https://colab.research.google.com/drive/1zrGDObIwB3exO5nfQoMPCgaU-3LvGQ_4), or upload the notebook to [Google Colab](https://colab.research.google.com/).
 2. Select **Runtime → Run all**.
 3. The notebook automatically installs the required libraries, downloads the test data and database from Google Drive, and runs the evaluation.
-4. Once execution is complete, the output file `G_02.xlsx` is generated. It contains two sheets: `summary` and `details`.
+4. Once execution is complete, the output file `Group_02.xlsx` is generated. It contains two sheets: `summary` and `details`.
 
-An Internet connection is required to download the data from Google Drive.
+An Internet connection is required to download the test data given from Google Drive.
 
 ## Run with Python (.py)
 
@@ -46,7 +48,7 @@ python -m pip install daachorse pandas xlsxwriter editdistance gdown
 
 ### 2. Prepare the data files
 
-Place the following files in the same directory as `g_02.py`:
+Place the following files in the same directory as `Group_02.py`:
 
 ```text
 test.json
@@ -66,19 +68,19 @@ gdown --fuzzy "https://drive.google.com/file/d/1yP2dBE8K9QtUiaLPewtQRr-hDH0gOgfa
 
 ### 3. Run the script
 
-**Note:** `g_02.py` is exported from the Colab notebook and currently contains notebook shell commands beginning with `!` (such as `!pip`, `!rm`, and `!gdown`). These commands are not valid in a standard Python script. Run the installation and download commands above in Terminal, then remove the corresponding lines beginning with `!` from `g_02.py` before running it.
+**Note:** `Group_02.py` is exported from the Colab notebook and currently contains notebook shell commands beginning with `!` (such as `!pip`, `!rm`, and `!gdown`). These commands are not valid in a standard Python script. Run the installation and download commands above in Terminal, then remove the corresponding lines beginning with `!` from `Group_02.py` before running it.
 
 Run:
 
 ```bash
-python g_02.py
+python Group_02.py
 ```
 
-The script saves the evaluation workbook `G_02.xlsx` in the current directory.
+The script saves the evaluation workbook `Group_02.xlsx` in the current directory.
 
 ## Output
 
-`Solution.process(address)` returns:
+`Solution.process(address)` returns in format:
 
 ```python
 {
